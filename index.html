@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+    <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+ 
+  <script language="JavaScript"> 
+function wayLingaw() {
+
+    var way = document.getElementById("way").value;
+    var lingaw = document.getElementById("lingaw").value;
+
+    document.getElementById('magic').innerText = "";
+
+
+    if (!way || !lingaw) {
+        setTimeout(function() {
+            alert('Please enter all the fields');
+        }, 100);
+        return;
+    } else {
+    document.getElementById('magic').innerText = "Hello, World!";
+    }
+}
+</script>
+</head>
+    <body>
+        <h1>
+            Calculator
+        </h1>
+        
+        <input type = "number" id="way" style="margin-bottom: 20px; margin-left: 5px;"/>
+        <br>
+        <select style="margin-left: 5px;">
+            <option>+</option>
+            <option>-</option>
+            <option>x</option>
+            <option>/</option>
+        </select>
+        <br>
+        <input id="lingaw" type = "number"  style="margin-top: 20px; margin-left: 5px;"/>
+        <br>
+        <button onclick="wayLingaw()" style="margin-top: 20px; margin-left: 5px;">Click</button>
+        <br>
+
+        <p><span id="magic"></span></p>
+    </body>
+</html>
